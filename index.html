@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrismaCraft</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              shine: 'shine 1s',
+            },
+            keyframes: {
+              shine: {
+                '100%': { left: '125%' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+      /* Ensure full height for the app container and prevent scrollbars */
+      html, body, #root {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      /* Set the base font for the entire application */
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+
+      /* Custom animation for a more 'stretchy' feel */
+      @keyframes stretch-flex-in {
+        0% {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+        70% {
+          transform: scale(1.05);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .animate-stretch-flex-in {
+        animation: stretch-flex-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      }
+      
+      /* Animation for letter-by-letter appearance */
+      @keyframes fade-in-up {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-up {
+        /* Set initial state for animation */
+        opacity: 0;
+        animation-fill-mode: forwards;
+        animation-name: fade-in-up;
+        animation-duration: 0.4s;
+        animation-timing-function: ease-out;
+      }
+
+      /* New animation for welcome text exit */
+      @keyframes fade-out-up {
+        to {
+          opacity: 0;
+          transform: translateY(-20px) scale(0.95);
+        }
+      }
+
+      /* Neumorphic button glow animation */
+      @keyframes pulse-glow {
+        0%, 100% {
+          box-shadow: var(--shadow-outer);
+        }
+        50% {
+          box-shadow: var(--shadow-outer-pulse);
+        }
+      }
+      .animate-pulse-glow {
+        animation: pulse-glow 3s infinite ease-in-out;
+      }
+      
+      /* Custom scrollbar and placeholder for textareas */
+      textarea::-webkit-scrollbar {
+        width: 10px;
+        background-color: transparent;
+      }
+      textarea::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb-color);
+        border-radius: 10px;
+        border: 3px solid var(--scrollbar-thumb-border-color);
+      }
+      textarea::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+      textarea::placeholder {
+        color: currentColor;
+        opacity: 0.8;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-50 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
