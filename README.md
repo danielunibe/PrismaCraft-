@@ -1,20 +1,39 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# PrismaCraft — Interactive Prompt Engineering & CRAFT Framework
 
-# Run and deploy your AI Studio app
+> **Project Status:** `Exploratory Prototype / Learning Tool`  
+> **Status:** `PRESENTATION_DEBT / UNDER REVIEW`  
+> **Classification:** Kept public but unpinned on profile.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/drive/1IShQTNwz_DEL9tdxfXLkOMhzRWtb8n6z
+## 1. Overview
 
-## Run Locally
+**PrismaCraft** is an interactive interface experiment designed to explore structured prompt creation using the **CRAFT Framework** (Context, Role, Action, Format, Target).
 
-**Prerequisites:**  Node.js
+Instead of treating generative AI interaction as unstructured free-form text input, PrismaCraft breaks the prompt authoring workflow into distinct parameter blocks, guiding users to produce predictable, high-quality responses from large language models.
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 2. Core Mechanics: The CRAFT Architecture
+
+1. **Context:** Establishing the environmental parameters, constraints, and background data.
+2. **Role:** Defining the operational persona, voice, and expertise domain of the model.
+3. **Action:** Specifying the explicit verbs, tasks, and sequence of analytical steps.
+4. **Format:** Constraining the output layout (JSON, Markdown table, LaTeX, plain text).
+5. **Target:** Clarifying the intended audience, reading level, and evaluation criteria.
+
+---
+
+## 3. Product & Interface Exploration
+
+- **Guided Step-by-Step Canvas:** Interactive input modules preventing missing contextual parameters.
+- **Dynamic Preview:** Real-time prompt compilation showing how modular inputs combine into a structured query.
+- **Variable Injection:** Template tokens allowing reusable prompt architectures.
+
+---
+
+## 4. Current Status & Limitations
+
+- **Prototype Stage:** Early-stage interface experiment developed to test prompt scaffolding mechanics.
+- **Limitations:** Does not currently include multi-tenant user accounts or live LLM benchmark evaluations.
+- **Superficie Pública:** Clasificado en revisión de presentación para eliminar dependencias de plantillas genéricas de scaffold.
